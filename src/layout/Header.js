@@ -20,7 +20,7 @@ const Header = () => {
   const toggler = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="info" light expand="md">
+    <Navbar color="info" className="fixed" light expand="md">
       <NavbarBrand>
         <Link to="/" className="text-white">
           GitFire App
@@ -34,7 +34,12 @@ const Header = () => {
         <Nav className="ml-auto" navbar>
           {context.user ? (
             <NavItem>
-              <NavLink tag={Link} to="/" className="text-white">
+              <NavLink
+                tag={Link}
+                onClick={() => context.setUser(null)}
+                to="/"
+                className="text-white"
+              >
                 Logout
               </NavLink>
             </NavItem>

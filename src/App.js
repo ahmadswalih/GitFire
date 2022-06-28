@@ -16,14 +16,22 @@ import { UserContext } from "./context/UserContext";
 //React-Router
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 
-import firebase from "firebase/app";
+//firebase
+import firebase from "firebase/compat/app";
 import "firebase/auth";
+import { getAuth } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+
+//layout components
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 
+import FirebaseConfig from "./config/FirebaseConfig";
+//init firebas`e
+const application = initializeApp(FirebaseConfig);
 const App = () => {
   const [user, setUser] = useState(null);
-
+  const auth = getAuth();
   return (
     <Router>
       <ToastContainer />
