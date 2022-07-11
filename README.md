@@ -7,6 +7,7 @@
 </p>
 
 > Git-Fire is a simple application where users can search github profiles , along with profiles users all so get the public repository details and followers list  . The application is Built using React js and Firebase as database. 
+> 
 > Name : Git-Fire = github-firebase application
 
 ## Features
