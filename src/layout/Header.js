@@ -37,7 +37,7 @@ const Header = () => {
               <NavLink
                 tag={Link}
                 onClick={() => context.setUser(null)}
-                to="/"
+                to="/signin"
                 className="text-white"
               >
                 Logout

@@ -6,7 +6,7 @@ const Footer = () => {
     <Container
       fluid
       tag="footer"
-      className="text-center text-white bg-info text-uppercase fixed-bottom  p-3"
+      className="text-center bg-info text-white text-uppercase fixed-bottom p-3"
     >
       Github Search Application with Firebase
     </Container>

@@ -48,6 +48,7 @@ const Signin = () => {
   if (context.user?.uid) {
     return Redirect("/");
   }
+
   return (
     <Container className="text-center">
       <Row>
@@ -87,6 +88,18 @@ const Signin = () => {
                   </Col>
                 </FormGroup>
               </CardBody>
+              <CardFooter>
+                <Button
+                  onClick={() => {
+                    setEmail("guest@gitFire.com");
+                    setPassword("123456");
+                  }}
+                  block
+                  color="warning"
+                >
+                  get Guest Credentials
+                </Button>
+              </CardFooter>
               <CardFooter>
                 <Button type="submit" block color="primary">
                   Sign In

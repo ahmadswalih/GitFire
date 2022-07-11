@@ -1,15 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
-import Axios from "axios";
 
-import {
-  Row,
-  Container,
-  Col,
-  Input,
-  Button,
-  InputGroup,
-  InputGroupAddon,
-} from "reactstrap";
+import { Row, Container, Col, Input, Button, InputGroup } from "reactstrap";
 
 import UserCard from "../components/UserCard";
 import Repos from "../components/Repos";
@@ -31,9 +22,13 @@ const Home = () => {
       toast("Not able to fetch the user", { type: "error" });
     }
   };
-  if (!context.user?.uid) {
-    return Navigate("/signin");
-  }
+
+  useEffect(() => {
+    if (!context.user?.uid) {
+      return Navigate("/signin");
+    }
+  }, []);
+
   return (
     <Container>
       <Row className=" mt-3">
